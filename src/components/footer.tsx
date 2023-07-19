@@ -13,7 +13,7 @@ const Footer = () => {
             />
           </a>
         </ImgContainer>
-        <AddressContainer>
+        <AddressContainer className="addressContainer">
           <p className="em desktop">(주) 인포필드</p>
           <p className="desktop">대표 이승희</p>
           <p className="mobile">(주) 인포필드 &nbsp;&nbsp; 대표 이승희</p>
@@ -29,7 +29,7 @@ const Footer = () => {
           </p>
           <p>Copyright 2023 InfoField Co. All rights reserved.</p>
         </AddressContainer>
-        <TelContainer>
+        <TelContainer className="telContainer">
           <div className="tel">
             <p>Tel</p>
             <p className="em">02 - 752 - 7168</p>
@@ -56,17 +56,44 @@ const FooterContainer = styled.footer`
   .mobile {
     display: none;
   }
+  /* 태블릿 */
   @media screen and (max-width: 1023px) {
     height: 220px;
     flex-direction: column;
     padding: 8px 0;
+
+    > .content-container {
+      flex-direction: column;
+      width: 744px;
+    }
+
+    .addressContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .telContainer {
+      display: flex;
+      justify-content: space-evenly;
+      min-width: 744px;
+    }
   }
+  /* 모바일 */
   @media screen and (max-width: 767px) {
+    height: 220px;
+    > .content-container {
+      width: 360px;
+    }
     .desktop {
       display: none;
     }
     .mobile {
       display: block;
+    }
+
+    .telContainer {
+      min-width: 360px;
     }
   }
 
@@ -78,14 +105,6 @@ const FooterContainer = styled.footer`
     font-size: 1.2rem;
     line-height: 20px;
     color: #444444;
-    @media screen and (max-width: 1023px) {
-      flex-direction: column;
-      width: 744px;
-    }
-
-    @media screen and (max-width: 767px) {
-      width: 360px;
-    }
   }
 `;
 
@@ -99,13 +118,6 @@ const AddressContainer = styled.div`
   > .em {
     font-weight: bolder;
   }
-  @media screen and (max-width: 1023px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  @media screen and (max-width: 767px) {
-  }
 `;
 
 const TelContainer = styled.div`
@@ -114,14 +126,6 @@ const TelContainer = styled.div`
     font-size: 1.7rem;
     font-weight: bolder;
     color: #000000;
-  }
-  @media screen and (max-width: 1023px) {
-    display: flex;
-    justify-content: space-evenly;
-    min-width: 744px;
-  }
-  @media screen and (max-width: 767px) {
-    min-width: 360px;
   }
 `;
 
