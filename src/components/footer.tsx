@@ -56,6 +56,15 @@ const FooterWrapper = styled.footer`
   .mobile {
     display: none;
   }
+  > .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1024px;
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: #444444;
+  }
   /* 태블릿 */
   @media screen and (max-width: 1023px) {
     height: 220px;
@@ -95,16 +104,6 @@ const FooterWrapper = styled.footer`
     .telContainer {
       min-width: 360px;
     }
-  }
-
-  > .content-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 1024px;
-    font-size: 1.2rem;
-    line-height: 20px;
-    color: #444444;
   }
 `;
 

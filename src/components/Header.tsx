@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { IoMenu } from "react-icons/io5";
 
 // height 80 80 55
 
@@ -35,9 +35,6 @@ const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
   return (
     <HeaderWrapper>
       <div className="content-container">
@@ -50,7 +47,7 @@ const Header = () => {
           />
         </LogoWrapper>
         <MenuWrapper className="menu-wrapper">
-          <div className="menu-list">
+          <ul className="menu-list">
             {menuList.map((el, idx) => {
               return (
                 <li
@@ -66,6 +63,9 @@ const Header = () => {
                 </li>
               );
             })}
+          </ul>
+          <div className="menuIcon-wrapper">
+            <IoMenu className="icon" />
           </div>
         </MenuWrapper>
       </div>
@@ -87,6 +87,37 @@ const HeaderWrapper = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    .menu-wrapper > .menuIcon-wrapper {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .content-container {
+      width: 744px;
+
+      .menu-wrapper > .menuIcon-wrapper {
+        display: block;
+        display: flex;
+        justify-content: end;
+      }
+    }
+    .icon {
+      font-size: 44px;
+    }
+    .header-logo {
+      width: 150px;
+    }
+  }
+  /* 모바일 */
+  @media screen and (max-width: 767px) {
+    .content-container {
+      width: 100%;
+    }
+    .menu-wrapper {
+      min-width: 200px;
+    }
   }
 `;
 
@@ -95,7 +126,7 @@ const LogoWrapper = styled.div`
     cursor: pointer;
   }
 `;
-const MenuWrapper = styled.ul`
+const MenuWrapper = styled.div`
   min-width: 600px;
   > .menu-list {
     display: flex;
@@ -113,6 +144,11 @@ const MenuWrapper = styled.ul`
       transition-duration: 0.2s;
       border-bottom: 1px solid #5a7fdf;
       color: #5a7fdf;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    .menu-list {
+      display: none;
     }
   }
 `;
