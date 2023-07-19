@@ -22,8 +22,7 @@ function App() {
           {/* content */}
           <Routes>
             <Route path="/" element={<AboutUs />} />
-            <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="orgnaization" element={<Organization />} />
+            <Route path="/organization" element={<Organization />} />
             <Route path="/businessAreas" element={<BusinessAreas />} />
             <Route path="/information" element={<Information />} />
             <Route path="/support" element={<Support />} />

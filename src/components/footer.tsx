@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterWrapper>
       <div className="content-container">
         <ImgContainer>
           <a href="https://intra.infofield.co.kr/" target="_blank">
@@ -40,18 +40,18 @@ const Footer = () => {
           </div>
         </TelContainer>
       </div>
-    </FooterContainer>
+    </FooterWrapper>
   );
 };
 
-const FooterContainer = styled.footer`
+const FooterWrapper = styled.footer`
   background-color: 000000;
   width: 100vw;
   height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #a1a3b2;
   height: 160px;
   .mobile {
     display: none;
