@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { styled } from "styled-components";
 
 const { kakao } = window;
 
@@ -42,9 +43,18 @@ const Location = () => {
         marginRight: "5px",
       }}
     >
-      <div id="map" style={{ width: "99%", height: "500px" }}></div>
+      <Map id="map"></Map>
     </div>
   );
 };
+
+const Map = styled.div`
+  width: 99%;
+  height: 500px;
+
+  @media screen and (max-width: 767px) {
+    height: 350px;
+  }
+`;
 
 export default Location;
