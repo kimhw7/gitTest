@@ -7,7 +7,7 @@ interface Props {
   onMenuOpen: () => void;
 }
 
-const menuList = [
+export const menuList = [
   {
     name: "회사소개",
     path: "/",

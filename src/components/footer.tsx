@@ -46,7 +46,7 @@ const Footer = () => {
 
 const FooterWrapper = styled.footer`
   background-color: 000000;
-  width: 100vw;
+  width: 98vw;
   height: 160px;
   display: flex;
   justify-content: center;
