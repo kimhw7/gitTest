@@ -46,7 +46,7 @@ const Footer = () => {
 
 const FooterWrapper = styled.footer`
   background-color: 000000;
-  width: 98vw;
+  width: 96vw;
   height: 160px;
   display: flex;
   justify-content: center;
@@ -68,6 +68,7 @@ const FooterWrapper = styled.footer`
   /* 태블릿 */
   @media screen and (max-width: 1023px) {
     height: 220px;
+    width: 96vw;
     flex-direction: column;
     padding: 8px 0;
 
@@ -91,6 +92,7 @@ const FooterWrapper = styled.footer`
   /* 모바일 */
   @media screen and (max-width: 767px) {
     height: 180px;
+    width: 96vw;
     > .content-container {
       width: 360px;
     }

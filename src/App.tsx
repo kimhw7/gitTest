@@ -79,6 +79,7 @@ const DefaultWrapper = styled.div`
 
   .mainImgWrapper {
     height: 160px;
+    width: 98vw;
   }
 
   .current-page {
@@ -101,6 +102,7 @@ const DefaultWrapper = styled.div`
     }
     .mainImgWrapper {
       height: 120px;
+      width: 98vw;
     }
   }
   @media screen and (max-width: 767px) {
@@ -109,6 +111,7 @@ const DefaultWrapper = styled.div`
     }
     .mainImgWrapper {
       height: 110px;
+      width: 96vw;
     }
   }
 

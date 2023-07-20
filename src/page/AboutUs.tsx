@@ -73,6 +73,7 @@ const DefaultContainer = styled.main`
 
   /* 모바일 */
   @media screen and (max-width: 767px) {
+    margin: 0;
     .history {
       width: 360px;
     }
