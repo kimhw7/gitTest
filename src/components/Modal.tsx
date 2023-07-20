@@ -29,7 +29,6 @@ const ModalDiv = styled.div`
   left: 50%;
   width: 50%;
   background-color: white;
-  padding: 1rem;
   height: 100vh;
   z-index: 30;
   animation: slide-down 300ms ease-out forwards;
