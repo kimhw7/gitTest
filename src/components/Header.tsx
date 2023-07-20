@@ -3,6 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 
 // height 80 80 55
+interface Props {
+  onMenuOpen: () => void;
+}
 
 const menuList = [
   {
@@ -31,7 +34,7 @@ const menuList = [
   },
 ];
 
-const Header = () => {
+const Header = (props: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -65,7 +68,7 @@ const Header = () => {
             })}
           </ul>
           <div className="menuIcon-wrapper">
-            <IoMenu className="icon" />
+            <IoMenu className="icon" onClick={props.onMenuOpen} />
           </div>
         </MenuWrapper>
       </div>
@@ -105,6 +108,9 @@ const HeaderWrapper = styled.header`
     }
     .icon {
       font-size: 44px;
+    }
+    .icon:hover {
+      cursor: pointer;
     }
     .header-logo {
       width: 150px;
