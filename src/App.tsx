@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import { Reset } from "styled-reset";
 import { Routes, Route, useLocation } from "react-router-dom";
@@ -32,13 +32,16 @@ function App() {
       {isMenuOpen && <Menu onMenuClose={closeMenuHandler} />}
       <DefaultWrapper className="background">
         <Header onMenuOpen={openMenuHandler} />
-        <img
-          className="mainImgWrapper"
-          src="img/mainImg.png"
-          alt="하얀 책상 위에 노트북이 올려져 있는 사진"
-        ></img>
-        <div className="current-page">
-          <p>{menuList.find((el) => el.path === location.pathname)!.name}</p>
+        <div className="main-content--wrapper">
+          <img
+            className="mainImgWrapper"
+            id="mainImg"
+            src="img/mainImg.png"
+            alt="하얀 책상 위에 노트북이 올려져 있는 사진"
+          ></img>
+          <div className="current-page">
+            <p>{menuList.find((el) => el.path === location.pathname)!.name}</p>
+          </div>
         </div>
         <div className="contentWrapper">
           {/* content */}
@@ -60,18 +63,25 @@ function App() {
 
 const DefaultWrapper = styled.div`
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  > .mainImgWrapper {
-    width: 98vw;
+  .main-content--wrapper {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
   }
 
-  > .current-page {
+  .mainImgWrapper {
+    height: 160px;
+  }
+
+  .current-page {
     width: 1024px;
     border-bottom: 1px solid #a1a3b2;
     height: 60px;
@@ -89,23 +99,33 @@ const DefaultWrapper = styled.div`
     .current-page {
       width: 744px;
     }
+    .mainImgWrapper {
+      height: 120px;
+    }
   }
   @media screen and (max-width: 767px) {
     .current-page {
       width: 360px;
+    }
+    .mainImgWrapper {
+      height: 110px;
     }
   }
 
   > .contentWrapper {
     width: 1024px;
     word-break: keep-all;
+    min-height: calc(100vh - 463px);
+    height: auto;
 
     @media screen and (max-width: 1023px) {
       width: 744px;
+      min-height: calc(100vh - 498px);
     }
     /* 모바일 */
     @media screen and (max-width: 767px) {
       width: 360px;
+      min-height: calc(100vh - 448px);
     }
   }
 `;

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <div className="content-container">
-        <ImgContainer>
+        <ImgContainer className="img-container">
           <a href="https://intra.infofield.co.kr/" target="_blank">
             <img
               className="footer-logo"
@@ -90,7 +90,7 @@ const FooterWrapper = styled.footer`
   }
   /* 모바일 */
   @media screen and (max-width: 767px) {
-    height: 220px;
+    height: 180px;
     > .content-container {
       width: 360px;
     }
@@ -103,6 +103,9 @@ const FooterWrapper = styled.footer`
 
     .telContainer {
       min-width: 360px;
+    }
+    .img-container {
+      display: none;
     }
   }
 `;

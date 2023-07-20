@@ -32,6 +32,9 @@ const AboutUs = () => {
         <p>(주)인포필드 대표 이 승희</p>
       </div>
       <div className="img-wrapper">
+        <div className="history-text">
+          <p className="text">회사 연혁</p>
+        </div>
         <img
           className="history"
           src="img/history1.png"
@@ -47,10 +50,25 @@ const DefaultContainer = styled.main`
   width: calc(100% - 16px);
   font-size: 1.4rem;
   line-height: 1.5;
-  margin-top: 20px;
+  padding-top: 20px;
   margin-left: 16px;
-  p {
+  .text-wrapper > p {
     margin-bottom: 20px;
+  }
+
+  > .img-wrapper {
+    margin: 32px 0;
+    border-top: 1px solid #cfcfcf;
+    .history-text {
+      margin: 16px 0;
+      display: flex;
+      justify-content: center;
+
+      .text {
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+    }
   }
 
   /* 모바일 */
