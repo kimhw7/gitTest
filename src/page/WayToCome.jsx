@@ -7,7 +7,7 @@ import Location from "../components/location";
 
 const WayToCome = () => {
   return (
-    <WaytoComeWrapper>
+    <DefaultContainer>
       <Location />
       <div className="information-container">
         <div className="information-wrapper">
@@ -23,11 +23,11 @@ const WayToCome = () => {
           <p>if@infofield.net</p>
         </div>
       </div>
-    </WaytoComeWrapper>
+    </DefaultContainer>
   );
 };
 
-const WaytoComeWrapper = styled.main`
+const DefaultContainer = styled.main`
   font-size: 1.7rem;
   display: flex;
   flex-direction: column;
