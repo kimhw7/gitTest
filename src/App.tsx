@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import { Reset } from "styled-reset";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "./components/Header";
@@ -14,6 +14,7 @@ import Support from "./page/Support";
 import WayToCome from "./page/WayToCome";
 import Menu from "./components/Menu";
 import { menuList } from "./components/Header";
+import Error from "./page/Error";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -40,7 +41,7 @@ function App() {
             alt="하얀 책상 위에 노트북이 올려져 있는 사진"
           ></img>
           <div className="current-page">
-            <p>{menuList.find((el) => el.path === location.pathname)!.name}</p>
+            <p>{menuList.find((el) => el.path === location.pathname)?.name}</p>
           </div>
         </div>
         <div className="contentWrapper">
@@ -52,6 +53,7 @@ function App() {
             <Route path="/information" element={<Information />} />
             <Route path="/support" element={<Support />} />
             <Route path="/wayToCome" element={<WayToCome />} />
+            <Route path="/*" element={<Error />} />
           </Routes>
         </div>
 

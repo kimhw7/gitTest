@@ -91,6 +91,7 @@ const DefaultContainer = styled.main`
 `;
 const History = styled.section`
   border-left: 1px solid #006b6a;
+  margin: 16px;
   padding: 8px 0 4px 0;
 `;
 
