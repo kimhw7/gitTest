@@ -63,6 +63,7 @@ const DefaultWrapper = styled.main`
     justify-content: space-around;
     align-items: end;
     margin-top: 32px;
+    margin-bottom: 32px;
     // 모바일
     @media screen and (max-width: 767px) {
       flex-direction: column;

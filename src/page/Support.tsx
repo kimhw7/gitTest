@@ -53,6 +53,7 @@ const SupportWrapper = styled.li`
   align-items: center;
   flex-direction: column;
   margin-top: 64px;
+  margin-bottom: 64px;
 
   > .img-link {
     margin-top: 16px;
