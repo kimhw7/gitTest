@@ -1,5 +1,8 @@
 import { styled } from "styled-components";
 
+import HistoryLine from "../util/HistoryLine";
+import HistoryData from "../util/HistoryData";
+
 const AboutUs = () => {
   return (
     <DefaultContainer>
@@ -35,11 +38,18 @@ const AboutUs = () => {
         <div className="history-text">
           <p className="text">회사 연혁</p>
         </div>
-        <img
+        {/* <img
           className="history"
           src="img/history1.png"
           alt="회사 연혁 이미지"
-        ></img>
+        ></img> */}
+        <History className="history-wrapper">
+          {HistoryData.map((el, idx) => {
+            return (
+              <HistoryLine key={idx} date={el.date} content={el.content} />
+            );
+          })}
+        </History>
       </div>
     </DefaultContainer>
   );
@@ -78,6 +88,10 @@ const DefaultContainer = styled.main`
       width: 360px;
     }
   }
+`;
+const History = styled.section`
+  border-left: 1px solid #006b6a;
+  padding: 8px 0 4px 0;
 `;
 
 export default AboutUs;

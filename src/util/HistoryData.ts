@@ -1,9 +1,9 @@
-type AnnounceDataType = {
+type HistoryDataType = {
   date: string;
   content: string;
 }[];
 
-const AnnounceData: AnnounceDataType = [
+const HistoryData: HistoryDataType = [
   {
     date: "2023-05",
     content: "가산역 반도아이비밸리 지식산업센터로 본사 이전",
@@ -25,4 +25,4 @@ const AnnounceData: AnnounceDataType = [
   { date: "2002-02", content: "개인업체 창업" },
 ];
 
-export default AnnounceData;
+export default HistoryData;

@@ -42,21 +42,17 @@ const DefaultContainer = styled.ul`
   display: flex;
   justify-content: space-around;
   font-size: 1.4rem;
-  margin-top: 32px;
 
+  // 모바일
   @media screen and (max-width: 767px) {
     flex-direction: column;
-    margin: 0;
-
-    > li {
-      margin-top: 32px;
-    }
   }
 `;
 const SupportWrapper = styled.li`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 64px;
 
   > .img-link {
     margin-top: 16px;
