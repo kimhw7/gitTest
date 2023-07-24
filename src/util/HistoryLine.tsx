@@ -28,11 +28,15 @@ const HistoryLineWrapper = styled.div`
     min-width: 70px;
     font-size: 1.3rem;
     > .date {
+      font-weight: bold;
       margin-left: 4px;
     }
   }
   .color {
     color: #006b6a;
+  }
+  .content {
+    margin-left: 8px;
   }
 `;
 
