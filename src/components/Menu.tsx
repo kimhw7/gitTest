@@ -73,6 +73,7 @@ const MenuContainer = styled.nav`
     border-bottom: 1px solid #5a7fdf;
     color: #5a7fdf;
     background-color: rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;
   }
 `;
 

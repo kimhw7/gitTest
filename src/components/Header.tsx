@@ -150,6 +150,7 @@ const MenuWrapper = styled.div`
       transition-duration: 0.2s;
       border-bottom: 1px solid #5a7fdf;
       color: #5a7fdf;
+      scale: 1.1;
     }
   }
   @media screen and (max-width: 1023px) {
