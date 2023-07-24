@@ -26,7 +26,7 @@ const Menu = ({ onMenuClose }: Props) => {
         <ul>
           {menuList.map((el, idx) => (
             <li
-              key={idx}
+              key={idx + "menu"}
               className="menu-tab"
               onClick={() => onMenuClick(el.path)}
             >

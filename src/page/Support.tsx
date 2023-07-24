@@ -23,7 +23,7 @@ const Support = () => {
     <DefaultContainer>
       {support.map((el, idx) => {
         return (
-          <SupportWrapper key={idx}>
+          <SupportWrapper key={idx + "support"}>
             <p>{`이미지를 클릭하여 ${el.name} 연결`}</p>
             <a className="img-link" target="_blank" href={el.link}>
               <img

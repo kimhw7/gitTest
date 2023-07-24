@@ -10,19 +10,19 @@ export type Organization = {
 const organizationList: Organization[] = [
   {
     name: "영업부",
-    content: ["상담, 견적", "02)752-7168", `E-mail: \n if@infofield.net`],
+    content: ["상담, 견적", "02)752-7168", `E-mail: if@infofield.net`],
   },
   {
     name: "기술지원부",
     content: [
       "기술문의 원격지원",
       "070-8888-0064",
-      `E-mail: \n support@infofield.net`,
+      `E-mail: support@infofield.net`,
     ],
   },
   {
     name: "관리부",
-    content: ["회계/총무 업무", `E-mail: \n if@infofield.net`],
+    content: ["회계/총무 업무", `E-mail: if@infofield.net`],
   },
 ];
 
@@ -45,23 +45,17 @@ const DefaultWrapper = styled.main`
 
   > .card-wrapper {
     width: 100%;
-    margin-top: 32px;
+    margin-top: 48px;
     display: flex;
     justify-content: space-around;
-  }
 
-  /* .mobile {
-    display: none;
-  } */
-  // 모바일
-  /* @media screen and (max-width: 767px) {
-    .desktop {
-      display: none;
+    // 모바일
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 0 16px 0;
     }
-    .mobile {
-      display: block;
-    } */
-  /* } */
+  }
 `;
 
 export default Organization;

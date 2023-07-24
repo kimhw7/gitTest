@@ -31,7 +31,7 @@ const Information = () => {
       <div className="docu-wrapper">
         {documentList.map((el, idx) => {
           return (
-            <Docu className="docu" key={idx}>
+            <Docu className="docu" key={idx + "docu"}>
               <a href={el.link} target="_blank">
                 <img
                   src={`img/${el.imgSrc}`}

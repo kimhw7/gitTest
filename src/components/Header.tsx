@@ -54,7 +54,7 @@ const Header = (props: Props) => {
             {menuList.map((el, idx) => {
               return (
                 <li
-                  key={idx}
+                  key={idx + "menu"}
                   className={
                     location.pathname === el.path
                       ? "menu-tab active"
