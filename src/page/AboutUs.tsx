@@ -62,6 +62,7 @@ const DefaultContainer = styled.main`
   line-height: 1.5;
   padding-top: 20px;
   margin-left: 16px;
+  margin-top: 16px;
   .text-wrapper > p {
     margin-bottom: 20px;
   }
