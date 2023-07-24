@@ -144,6 +144,7 @@ const MenuWrapper = styled.div`
     > .active {
       border-bottom: 1px solid #5a7fdf;
       color: #5a7fdf;
+      scale: 1.1;
     }
     .menu-tab:hover {
       cursor: pointer;
