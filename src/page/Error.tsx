@@ -10,16 +10,23 @@ const Error = () => {
 
   return (
     <DefaultWrapper>
-      404 Error
-      <br />
-      Page not found
+      <section>
+        <img src="img/footer-logo.png" />
+      </section>
+      <section>
+        404 Error
+        <br />
+        Page not found
+        <br />
+        return to <a href="/">main</a>
+      </section>
     </DefaultWrapper>
   );
 };
 
 const DefaultWrapper = styled.main`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: #007776;
   font-size: 4.8rem;

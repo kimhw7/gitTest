@@ -15,6 +15,7 @@ import WayToCome from "./page/WayToCome";
 import Menu from "./components/Menu";
 import { menuList } from "./components/Header";
 import Error from "./page/Error";
+import Service from "./page/Service";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -53,6 +54,7 @@ function App() {
             <Route path="/information" element={<Information />} />
             <Route path="/support" element={<Support />} />
             <Route path="/wayToCome" element={<WayToCome />} />
+            <Route path="/Service" element={<Service />} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
