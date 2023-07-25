@@ -42,7 +42,9 @@ function App() {
             alt="하얀 책상 위에 노트북이 올려져 있는 사진"
           ></img>
           <div className="current-page">
-            <p>{menuList.find((el) => el.path === location.pathname)?.name}</p>
+            <h1>
+              {menuList.find((el) => el.path === location.pathname)?.name}
+            </h1>
           </div>
         </div>
         <div className="contentWrapper">
@@ -93,7 +95,7 @@ const DefaultWrapper = styled.div`
     display: flex;
     align-items: center;
 
-    > p {
+    > h1 {
       font-size: 28px;
       font-weight: bolder;
       margin-left: 16px;
