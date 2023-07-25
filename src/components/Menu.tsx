@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 
 import Modal from "./Modal";
@@ -11,6 +11,7 @@ type Props = {
 
 const Menu = ({ onMenuClose }: Props) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const onMenuClick = (path: string) => {
     onMenuClose();
@@ -27,7 +28,9 @@ const Menu = ({ onMenuClose }: Props) => {
           {menuList.map((el, idx) => (
             <li
               key={idx + "menu"}
-              className="menu-tab"
+              className={
+                el.path === location.pathname ? "menu-tab active" : "menu-tab"
+              }
               onClick={() => onMenuClick(el.path)}
             >
               {el.name}
@@ -72,7 +75,13 @@ const MenuContainer = styled.nav`
     cursor: pointer;
     border-bottom: 1px solid #5a7fdf;
     color: #5a7fdf;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f6f6f6;
+    font-size: 1.8rem;
+  }
+  .active {
+    border-bottom: 1px solid #5a7fdf;
+    color: #5a7fdf;
+    background-color: #f6f6f6;
     font-size: 1.8rem;
   }
 `;
