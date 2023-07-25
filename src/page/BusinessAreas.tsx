@@ -53,7 +53,8 @@ const BusinessAreas = () => {
           >
             <img
               className="businessArea-img"
-              src={el.imgSrc} /*alt={el.title + "사진"}*/
+              src={el.imgSrc}
+              alt={el.title + "사진"}
             />
             <TextWrapper className="textWrapper">
               <h2 className="title">{el.title}</h2>
