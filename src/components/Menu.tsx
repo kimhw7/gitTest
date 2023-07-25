@@ -49,7 +49,7 @@ const MenuContainer = styled.nav`
   > .header {
     width: 100%;
     background-color: #007776;
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
