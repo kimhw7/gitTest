@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { styled, createGlobalStyle } from "styled-components";
 import { reset } from "styled-reset";
-import { Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "./components/Header";
@@ -140,6 +140,7 @@ const DefaultWrapper = styled.div`
 
 const GlobalStyles = createGlobalStyle`
   ${reset};
+  /* 스크롤바 숨기기 */
   body::-webkit-scrollbar {
   display: none;
 }

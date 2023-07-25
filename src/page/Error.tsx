@@ -1,12 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
-import React, { useEffect } from "react";
 
 const Error = () => {
   const navigate = useNavigate();
-  //   useEffect(() => {
-  //     navigate("/");
-  //   }, []);
 
   return (
     <DefaultWrapper>
