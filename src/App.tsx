@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
-import { styled } from "styled-components";
-import { Reset } from "styled-reset";
+import { styled, createGlobalStyle } from "styled-components";
+import { reset } from "styled-reset";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "./components/Header";
 import Footer from "./components/footer";
 import AboutUs from "./page/AboutUs";
-import Organization from "./page/Organization";
 import BusinessAreas from "./page/BusinessAreas";
+import Service from "./page/Service";
+import Organization from "./page/Organization";
 import Information from "./page/Information";
 import Support from "./page/Support";
 import WayToCome from "./page/WayToCome";
 import Menu from "./components/Menu";
 import { menuList } from "./components/Header";
 import Error from "./page/Error";
-import Service from "./page/Service";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <Reset />
+      <GlobalStyles />
       {isMenuOpen && <Menu onMenuClose={closeMenuHandler} />}
       <DefaultWrapper className="background">
         <Header onMenuOpen={openMenuHandler} />
@@ -60,7 +60,6 @@ function App() {
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
-
         <Footer />
       </DefaultWrapper>
     </React.Fragment>
@@ -137,6 +136,18 @@ const DefaultWrapper = styled.div`
       min-height: calc(100vh - 448px);
     }
   }
+`;
+
+const GlobalStyles = createGlobalStyle`
+  ${reset};
+  body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
 `;
 
 export default App;
