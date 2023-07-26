@@ -31,6 +31,11 @@ const DefaultContainer = styled.main`
   font-size: 1.7rem;
   display: flex;
   flex-direction: column;
+  /* 모바일 글씨가 위로 가게 */
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+    margin-bottom: 24px;
+  }
 
   .information-container {
     display: flex;
@@ -54,6 +59,7 @@ const DefaultContainer = styled.main`
       flex-direction: column;
       align-items: start;
       justify-content: space-between;
+      margin: 0 24px 24px 24px;
 
       .information-wrapper {
         margin-top: 16px;
