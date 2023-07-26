@@ -19,7 +19,7 @@ const businessAreaList: BusinessAreaData[] = [
     ],
   },
   {
-    imgSrc: "img/M365.png",
+    imgSrc: "img/Micro365.png",
     title: "M365 외주 헬프데스크",
     content: [
       " M365 사용 고객사 중 M365 전담 기술지원이 불가한 경우 외주 지원",
@@ -28,7 +28,7 @@ const businessAreaList: BusinessAreaData[] = [
     ],
   },
   {
-    imgSrc: "img/.png",
+    imgSrc: "img/handshake.png",
     title: "중소기업 IT Total 아웃소싱",
     content: [
       "Server, PC, Network 등 중소기업이 필요로 하는 제반 업무 대행",
@@ -91,11 +91,10 @@ const DefaultWrapper = styled.main`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 24px 8px;
+    margin: 32px 8px;
 
     .businessArea-img {
-      max-width: 40%;
-      background-color: pink;
+      width: 40%;
     }
   }
   .reverse {
@@ -122,7 +121,7 @@ const TextWrapper = styled.div`
   color: #808080;
   line-height: 1.5;
   .title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: bolder;
   }
 
@@ -132,7 +131,8 @@ const TextWrapper = styled.div`
 
   .serviceButton {
     padding: 8px 0;
-    margin-top: 4px;
+    margin-top: 8px;
+    margin-bottom: 32px;
   }
 
   .serviceButton:hover {
