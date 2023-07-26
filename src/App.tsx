@@ -3,6 +3,7 @@ import { styled, createGlobalStyle, keyframes } from "styled-components";
 import { reset } from "styled-reset";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
+import "./asset/font/font.css";
 
 import Header from "./components/Header";
 import Footer from "./components/footer";

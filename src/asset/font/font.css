@@ -2,7 +2,7 @@
   font-family: "Pretendard";
   font-display: fallback;
 
-  src: url("./Pretendard-Regular.woff") format("woff"),
+  src: url("./Pretendard-Light.woff") format("woff"),
     url("./Pretendard-Bold.woff") format("woff"),
     url("./Pretendard-Medium.woff") format("woff");
 
