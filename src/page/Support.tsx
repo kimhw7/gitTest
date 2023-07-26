@@ -26,7 +26,7 @@ const Support = () => {
     },
   ];
   return (
-    <DefaultContainer>
+    <DefaultContainer className="openAnimation">
       {support.map((el, idx) => {
         return (
           <SupportWrapper key={idx + "support"}>

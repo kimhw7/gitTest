@@ -47,7 +47,7 @@ const BusinessAreas = () => {
   const navigate = useNavigate();
 
   return (
-    <DefaultWrapper>
+    <DefaultWrapper className="openAnimation">
       {businessAreaList.map((el, idx) => {
         return (
           <div

@@ -7,7 +7,7 @@ import Location from "../components/location";
 
 const WayToCome = () => {
   return (
-    <DefaultContainer>
+    <DefaultContainer className="openAnimation">
       <Location />
       <div className="information-container">
         <div className="information-wrapper">

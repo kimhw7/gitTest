@@ -71,6 +71,19 @@ function App() {
   );
 }
 
+// keyframes
+const smoothAppear = keyframes`
+    
+    from {
+      opacity: 0;
+      transform: translateY(5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+  `;
 const DefaultWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -131,6 +144,10 @@ const DefaultWrapper = styled.div`
     min-height: calc(100vh - 463px);
     height: auto;
 
+    .openAnimation {
+      animation: ${smoothAppear} 1s;
+    }
+
     @media screen and (max-width: 1023px) {
       width: 744px;
       min-height: calc(100vh - 498px);
@@ -155,18 +172,5 @@ body {
   scrollbar-width: none; /* 파이어폭스 */
 }
 `;
-
-const smoothAppear = keyframes`
-    
-    from {
-      opacity: 0;
-      transform: translateY(-5%);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-  `;
 
 export default App;

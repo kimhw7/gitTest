@@ -23,7 +23,7 @@ const Information = () => {
     },
   ];
   return (
-    <DefaultWrapper>
+    <DefaultWrapper className="openAnimation">
       <div className="text-wrapper">
         <p className="text">
           상호: (주)인포필드

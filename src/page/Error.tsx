@@ -5,7 +5,7 @@ const Error = () => {
   const navigate = useNavigate();
 
   return (
-    <DefaultWrapper>
+    <DefaultWrapper className="openAnimation">
       <section>
         <img src="img/footer-logo.png" />
       </section>

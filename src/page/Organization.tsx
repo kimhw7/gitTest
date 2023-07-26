@@ -28,7 +28,7 @@ const organizationList: Organization[] = [
 
 const Organization = () => {
   return (
-    <DefaultWrapper>
+    <DefaultWrapper className="openAnimation">
       <div className="card-wrapper">
         {organizationList.map((el, idx) => {
           return <Card key={idx} props={el} />;

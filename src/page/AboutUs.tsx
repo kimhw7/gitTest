@@ -5,7 +5,7 @@ import HistoryData from "../util/HistoryData";
 
 const AboutUs = () => {
   return (
-    <DefaultContainer>
+    <DefaultContainer className="openAnimation">
       <div className="text-wrapper">
         <p>
           ㈜인포필드는 넘쳐나는 정보와 급변하는 인터넷환경에서 고객사가 원하는
