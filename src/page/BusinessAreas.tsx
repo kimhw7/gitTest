@@ -143,9 +143,12 @@ const TextWrapper = styled.div`
   }
 
   .serviceButton {
-    padding: 8px 0;
+    padding: 8px;
     margin-top: 8px;
     margin-bottom: 32px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    min-height: 40px;
   }
 
   .serviceButton:hover {
