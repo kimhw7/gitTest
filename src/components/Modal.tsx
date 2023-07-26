@@ -32,12 +32,12 @@ const ModalOverlay = (props: {
 const AnimationWrapper = styled.div`
   .sidebar {
     left: 100%;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   .sidebar.active {
     left: 50%;
-    transition: 0.7s;
+    transition: 0.3s;
   }
 `;
 const ModalDiv = styled.div`
