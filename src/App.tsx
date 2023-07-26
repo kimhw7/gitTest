@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, createGlobalStyle } from "styled-components";
+import { styled, createGlobalStyle, keyframes } from "styled-components";
 import { reset } from "styled-reset";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState } from "react";
@@ -31,7 +31,8 @@ function App() {
   return (
     <React.Fragment>
       <GlobalStyles />
-      {isMenuOpen && <Menu onMenuClose={closeMenuHandler} />}
+
+      <Menu onMenuClose={closeMenuHandler} isMenuOpen={isMenuOpen} />
       <DefaultWrapper className="background">
         <Header onMenuOpen={openMenuHandler} />
         <div className="main-content--wrapper">
@@ -154,5 +155,18 @@ body {
   scrollbar-width: none; /* 파이어폭스 */
 }
 `;
+
+const smoothAppear = keyframes`
+    
+    from {
+      opacity: 0;
+      transform: translateY(-5%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+  `;
 
 export default App;

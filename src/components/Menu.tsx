@@ -7,9 +7,10 @@ import { menuList } from "./Header";
 
 type Props = {
   onMenuClose: () => void;
+  isMenuOpen: boolean;
 };
 
-const Menu = ({ onMenuClose }: Props) => {
+const Menu = ({ onMenuClose, isMenuOpen }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -19,7 +20,7 @@ const Menu = ({ onMenuClose }: Props) => {
   };
 
   return (
-    <Modal onMenuClose={onMenuClose}>
+    <Modal onMenuClose={onMenuClose} isMenuOpen={isMenuOpen}>
       <MenuContainer>
         <div className="header">
           <AiOutlineClose className="close" onClick={onMenuClose} />
