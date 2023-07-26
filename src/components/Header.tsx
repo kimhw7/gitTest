@@ -122,6 +122,9 @@ const HeaderWrapper = styled.header`
     }
     .header-logo {
       width: 150px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   /* 모바일 */
