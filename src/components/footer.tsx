@@ -6,11 +6,15 @@ const Footer = () => {
       <div className="content-container">
         <ImgContainer className="img-container">
           <a href="https://intra.infofield.co.kr/" target="_blank">
-            <img
-              className="footer-logo"
-              src="img/footer-logo.png"
-              alt="footer 로고 사진, 클릭 시 인트라넷 이동"
-            />
+            <picture className="footer-logo">
+              <source srcSet="img/footer-logo.webp" type="image/webp" />
+              <source srcSet="img/footer-logo.png" type="image/png" />
+              <img
+                className="footer-logo"
+                src="img/footer-logo.png"
+                alt="footer 로고 사진, 클릭 시 인트라넷 이동"
+              />
+            </picture>
           </a>
         </ImgContainer>
         <AddressContainer className="addressContainer">

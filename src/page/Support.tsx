@@ -2,7 +2,9 @@ import { styled } from "styled-components";
 
 type SupportData = {
   name: string;
+  webpSrc: string;
   imgSrc: string;
+  file: string;
   link: string;
 };
 
@@ -10,12 +12,16 @@ const Support = () => {
   const support: SupportData[] = [
     {
       name: "원격지원",
-      imgSrc: "anySupport.gif",
+      webpSrc: "img/anySupport.webp",
+      imgSrc: "img/anySupport.gif",
+      file: "gif",
       link: "https://as82.kr/infofield/",
     },
     {
       name: "네이버 카페",
-      imgSrc: "naverCafe.png",
+      webpSrc: "img/naverCafe.webp",
+      imgSrc: "img/naverCafe.png",
+      file: "png",
       link: "https://cafe.naver.com/msexchange?iframe_url=/ArticleList.nhn%3Fsearch.clubid=23119675%26search.menuid=12%26search.boardtype=L",
     },
   ];
@@ -26,10 +32,14 @@ const Support = () => {
           <SupportWrapper key={idx + "support"}>
             <p>{`이미지를 클릭하여 ${el.name} 연결`}</p>
             <a className="img-link" target="_blank" href={el.link}>
-              <img
-                alt={`${el.name} 사진, 클릭시 해당 링크 이동`}
-                src={`img/${el.imgSrc}`}
-              />
+              <picture>
+                <source srcSet={el.webpSrc} type="image/webp" />
+                <source srcSet={el.webpSrc} type={"image/" + el.file} />
+                <img
+                  alt={`${el.name} 사진, 클릭시 해당 링크 이동`}
+                  src={el.imgSrc}
+                />
+              </picture>
             </a>
           </SupportWrapper>
         );

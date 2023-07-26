@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
 
 type BusinessAreaData = {
+  webpSrc: string;
   imgSrc: string;
   title: string;
   content: string[];
@@ -9,6 +10,7 @@ type BusinessAreaData = {
 
 const businessAreaList: BusinessAreaData[] = [
   {
+    webpSrc: "img/windowsserver.webp",
     imgSrc: "img/windowsserver.png",
     title: "Microsoft Server 기술지원",
     content: [
@@ -19,6 +21,7 @@ const businessAreaList: BusinessAreaData[] = [
     ],
   },
   {
+    webpSrc: "img/Micro365.webp",
     imgSrc: "img/Micro365.png",
     title: "M365 외주 헬프데스크",
     content: [
@@ -28,6 +31,7 @@ const businessAreaList: BusinessAreaData[] = [
     ],
   },
   {
+    webpSrc: "img/handshake.webp",
     imgSrc: "img/handshake.png",
     title: "중소기업 IT Total 아웃소싱",
     content: [
@@ -54,11 +58,16 @@ const BusinessAreas = () => {
             }
             key={idx + "businessArea"}
           >
-            <img
-              className="businessArea-img"
-              src={el.imgSrc}
-              alt={el.title + "사진"}
-            />
+            <picture className="businessArea-img">
+              <source srcSet={el.webpSrc} type="image/webp" />
+              <source srcSet={el.imgSrc} type="image/png" />
+
+              <img
+                className="businessArea-img-inner"
+                src={el.imgSrc}
+                alt={el.title + "사진"}
+              />
+            </picture>
             <TextWrapper className="textWrapper">
               <h2 className="title">{el.title}</h2>
               {el.content.map((el, idx) => {
@@ -95,6 +104,10 @@ const DefaultWrapper = styled.main`
 
     .businessArea-img {
       width: 40%;
+
+      .businessArea-img-inner {
+        width: 100%;
+      }
     }
   }
   .reverse {

@@ -46,12 +46,16 @@ const Header = (props: Props) => {
     <HeaderWrapper>
       <div className="content-container">
         <LogoWrapper className="logo-Wrapper">
-          <img
-            className="header-logo"
-            src="img/footer-logo.png"
-            alt="header 로고사진, 클릭시 메인페이지 이동"
-            onClick={() => navigate("/")}
-          />
+          <picture className="header-logo">
+            <source srcSet="img/footer-logo.webp" type="image/webp" />
+            <source srcSet="img/footer-logo.png" type="image/png" />
+            <img
+              className="header-logo"
+              src="img/footer-logo.png"
+              alt="header 로고사진, 클릭시 메인페이지 이동"
+              onClick={() => navigate("/")}
+            />
+          </picture>
         </LogoWrapper>
         <MenuWrapper className="menu-wrapper">
           <ul className="menu-list">

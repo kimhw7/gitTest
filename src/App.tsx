@@ -35,12 +35,16 @@ function App() {
       <DefaultWrapper className="background">
         <Header onMenuOpen={openMenuHandler} />
         <div className="main-content--wrapper">
-          <img
-            className="mainImgWrapper"
-            id="mainImg"
-            src="img/mainImg.png"
-            alt="하얀 책상 위에 노트북이 올려져 있는 사진"
-          ></img>
+          <picture className="mainImgWrapper">
+            <source srcSet="img/mainImg.webp" type="image/webp" />
+            <source srcSet="img/mainImg.png" type="image/png" />
+            <img
+              className="mainImgWrapper"
+              id="mainImg"
+              src="img/mainImg.png"
+              alt="하얀 책상 위에 노트북이 올려져 있는 사진"
+            />
+          </picture>
           <div className="current-page">
             <h1>
               {menuList.find((el) => el.path === location.pathname)?.name}

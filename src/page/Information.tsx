@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 type Documents = {
   name: string;
+  webpSrc: string;
   imgSrc: string;
   link: string;
 };
@@ -10,12 +11,14 @@ const Information = () => {
   const documentList: Documents[] = [
     {
       name: "사업자 등록증",
-      imgSrc: "if-regist.png",
+      webpSrc: "img/if-regist.webp",
+      imgSrc: "img/if-regist.png",
       link: "http://www.infofield.net/ImageInfo/if_regist.jpg",
     },
     {
       name: "입금 계좌 사본",
-      imgSrc: "if-bank.png",
+      webpSrc: "img/if-bank.webp",
+      imgSrc: "img/if-bank.png",
       link: "http://www.infofield.net/ImageInfo/if_bank.jpg",
     },
   ];
@@ -33,10 +36,14 @@ const Information = () => {
           return (
             <Docu className="docu" key={idx + "docu"}>
               <a href={el.link} target="_blank">
-                <img
-                  src={`img/${el.imgSrc}`}
-                  alt={`${el.name} 서류 미리보기 사진, 클릭 시 사진 링크 이동`}
-                />
+                <picture>
+                  <source srcSet={el.webpSrc} type="image/webp" />
+                  <source srcSet={el.imgSrc} type="image/png" />
+                  <img
+                    src={el.imgSrc}
+                    alt={`${el.name} 서류 미리보기 사진, 클릭 시 사진 링크 이동`}
+                  />
+                </picture>
               </a>
               <p>{el.name}</p>
             </Docu>
