@@ -107,7 +107,7 @@ const DefaultWrapper = styled.main`
       align-items: center;
 
       .businessArea-img {
-        max-width: 100%;
+        width: 100%;
       }
     }
   }
