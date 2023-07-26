@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { BiSolidRightArrow } from "react-icons/bi";
 
 type Props = {
   date: string;
@@ -9,7 +10,9 @@ const HistoryLine = (props: Props) => {
   return (
     <HistoryLineWrapper>
       <div className="date-wrapper">
-        <p className="arrow color">▶</p>
+        <p className="arrow color">
+          <BiSolidRightArrow />
+        </p>
         <p className="date color">{props.date}</p>
       </div>
       <p className="content">{props.content}</p>
