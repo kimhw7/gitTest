@@ -37,14 +37,14 @@ const BusinessAreas = () => {
                   </p>
                 );
               })}
-              {idx === 0 && (
+              {/* {idx === 0 && (
                 <button
                   className="serviceButton"
                   onClick={() => navigate("/service")}
                 >
                   해당 서비스 확인하기
                 </button>
-              )}
+              )} */}
             </TextWrapper>
           </div>
         );
@@ -109,7 +109,7 @@ const TextWrapper = styled.div`
     margin-top: 12px;
   }
 
-  .serviceButton {
+  /* .serviceButton {
     padding: 8px;
     margin-top: 8px;
     margin-bottom: 32px;
@@ -120,7 +120,7 @@ const TextWrapper = styled.div`
 
   .serviceButton:hover {
     cursor: pointer;
-  }
+  } */
   // 모바일
   @media screen and (max-width: 767px) {
     width: 90%;
