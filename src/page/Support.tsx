@@ -1,33 +1,11 @@
 import { styled } from "styled-components";
 
-type SupportData = {
-  name: string;
-  webpSrc: string;
-  imgSrc: string;
-  file: string;
-  link: string;
-};
+import supportList from "../asset/data/supportData";
 
 const Support = () => {
-  const support: SupportData[] = [
-    {
-      name: "원격지원",
-      webpSrc: "img/anySupport.webp",
-      imgSrc: "img/anySupport.gif",
-      file: "gif",
-      link: "https://as82.kr/infofield/",
-    },
-    {
-      name: "네이버 카페",
-      webpSrc: "img/naverCafe.webp",
-      imgSrc: "img/naverCafe.png",
-      file: "png",
-      link: "https://cafe.naver.com/msexchange?iframe_url=/ArticleList.nhn%3Fsearch.clubid=23119675%26search.menuid=12%26search.boardtype=L",
-    },
-  ];
   return (
     <DefaultContainer className="openAnimation">
-      {support.map((el, idx) => {
+      {supportList.map((el, idx) => {
         return (
           <SupportWrapper key={idx + "support"}>
             <p>{`이미지를 클릭하여 ${el.name} 연결`}</p>

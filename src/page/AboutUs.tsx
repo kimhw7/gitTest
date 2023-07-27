@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
-import HistoryLine from "../util/HistoryLine";
-import HistoryData from "../util/HistoryData";
+import HistoryLine from "../components/HistoryLine";
+import HistoryData from "../asset/data/historyData";
 
 const AboutUs = () => {
   return (

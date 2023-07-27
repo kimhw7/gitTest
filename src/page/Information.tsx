@@ -1,27 +1,8 @@
 import { styled } from "styled-components";
 
-type Documents = {
-  name: string;
-  webpSrc: string;
-  imgSrc: string;
-  link: string;
-};
+import documentList from "../asset/data/inforamtionData";
 
 const Information = () => {
-  const documentList: Documents[] = [
-    {
-      name: "사업자 등록증",
-      webpSrc: "img/if-regist.webp",
-      imgSrc: "img/if-regist.png",
-      link: "http://www.infofield.net/ImageInfo/if_regist.jpg",
-    },
-    {
-      name: "입금 계좌 사본",
-      webpSrc: "img/if-bank.webp",
-      imgSrc: "img/if-bank.png",
-      link: "http://www.infofield.net/ImageInfo/if_bank.jpg",
-    },
-  ];
   return (
     <DefaultWrapper className="openAnimation">
       <div className="text-wrapper">

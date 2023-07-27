@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import type { Organization } from "../../page/Organization";
+import type { Organization } from "../../asset/data/organizationData";
 
 type Props = {
   props: Organization;
