@@ -2,7 +2,6 @@ import { styled } from "styled-components";
 import { useNavigate, useLocation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 
-// height 80 80 55
 interface Props {
   onMenuOpen: () => void;
 }
