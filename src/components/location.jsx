@@ -28,6 +28,28 @@ const Location = () => {
     });
     marker.setMap(map);
 
+    // 마커에 커서가 오버됐을 때 마커 위에 표시할 인포윈도우를 생성합니다
+    var iwContent =
+      '<div style="padding:5px; width:100%; font-size:1.2rem"; display:flex; justify-content:center; align-items:center;>(주)인포필드</div>'; // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+
+    // 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+      content: iwContent,
+    });
+
+    // 마커에 마우스오버 이벤트를 등록합니다
+    kakao.maps.event.addListener(marker, "mouseover", function () {
+      // 마커에 마우스오버 이벤트가 발생하면 인포윈도우를 마커위에 표시합니다
+      infowindow.open(map, marker);
+    });
+
+    // 마커에 마우스아웃 이벤트를 등록합니다
+    kakao.maps.event.addListener(marker, "mouseout", function () {
+      // 마커에 마우스아웃 이벤트가 발생하면 인포윈도우를 제거합니다
+      infowindow.close();
+    });
+
+    // 스카이뷰 로직
     setMapType = (maptype) => {
       var roadmapControl = document.getElementById("btnRoadmap");
       var skyviewControl = document.getElementById("btnSkyview");
@@ -89,14 +111,21 @@ const Map = styled.div`
 
   .custom_typecontrol {
     position: relative;
+    left: 80%;
+    top: 10%;
     z-index: 999;
     background-color: #f6f7f8;
     width: 130px;
     display: flex;
     justify-content: space-around;
     border: 1px solid #000000;
-    height: 30px;
+    height: 25px;
     border-radius: 5px;
+
+    // 모바일
+    @media screen and (max-width: 767px) {
+      left: 50%;
+    }
 
     .line {
       border-left: 1px solid #000000;
@@ -117,6 +146,7 @@ const Map = styled.div`
     .selected_btn {
       background-color: #5b6d8a;
       box-shadow: 3px gray inset;
+      color: #f6f7f8;
     }
   }
 `;
