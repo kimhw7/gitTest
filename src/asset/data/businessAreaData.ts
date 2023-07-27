@@ -13,7 +13,7 @@ const businessAreaList: BusinessAreaData[] = [
     content: [
       "Windows Server, Active Directory, Exchange Server, MSSQL Server, TMG/ARR, IIS, Cluster 등의 컨설팅, 설치, 마이그레이션 및 장애처리 업무 수행",
       "MicroSoft 서버제품군 및 Hyper-V 를 기반으로 하는 대규모 시스템 디자인",
-      "익스체인지서버 장애처리, 익스체인지서버 마이그레이션, 익스체인지서버 유지보수 전문",
+      "Exchange Server 장애처리, Exchange Server 마이그레이션, Exchange Server 유지보수 전문",
       "MicroSoft Hyper-V 기반 가상서버/개발서버 임대/호스팅 및 Windows 서버 가상화",
     ],
   },
