@@ -27,7 +27,7 @@ const HistoryLineWrapper = styled.div`
   display: flex;
   .date-wrapper {
     display: flex;
-    min-width: 70px;
+    min-width: 75px;
     font-size: 1.4rem;
     > .date {
       font-weight: bold;
