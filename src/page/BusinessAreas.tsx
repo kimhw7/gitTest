@@ -103,7 +103,8 @@ const DefaultWrapper = styled.main`
     margin: 32px 8px;
 
     .businessArea-img {
-      width: 40%;
+      width: 350px;
+      height: 350px;
 
       .businessArea-img-inner {
         width: 100%;
