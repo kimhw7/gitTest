@@ -56,6 +56,12 @@ const BusinessAreas = () => {
 const DefaultWrapper = styled.main`
   font-size: 1.4rem;
   width: 100%;
+  // 모바일
+  @media screen and (max-width: 767px) {
+    .businessArea-wrapper:first-child {
+      margin: 0 8px;
+    }
+  }
   .businessArea-wrapper {
     display: flex;
     flex-direction: row;
