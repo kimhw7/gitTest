@@ -38,11 +38,6 @@ const AboutUs = () => {
         <div className="history-text">
           <p className="text">회사 연혁</p>
         </div>
-        {/* <img
-          className="history"
-          src="img/history1.png"
-          alt="회사 연혁 이미지"
-        ></img> */}
         <History className="history-wrapper">
           {HistoryData.map((el, idx) => {
             return (

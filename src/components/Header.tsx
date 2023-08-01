@@ -19,10 +19,6 @@ export const menuList = [
     name: "사업분야",
     path: "/businessAreas",
   },
-  // {
-  //   name: "서비스",
-  //   path: "/service",
-  // },
   {
     name: "회사기초정보",
     path: "/information",

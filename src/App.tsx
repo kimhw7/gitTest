@@ -54,7 +54,6 @@ function App() {
           </div>
         </div>
         <div className="contentWrapper">
-          {/* content */}
           <Routes>
             <Route path="/" element={<AboutUs />} />
             <Route path="/organization" element={<Organization />} />
@@ -62,7 +61,6 @@ function App() {
             <Route path="/information" element={<Information />} />
             <Route path="/support" element={<Support />} />
             <Route path="/wayToCome" element={<WayToCome />} />
-            {/* <Route path="/Service" element={<Service />} /> */}
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>

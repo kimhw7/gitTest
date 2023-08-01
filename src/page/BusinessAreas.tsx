@@ -37,14 +37,6 @@ const BusinessAreas = () => {
                   </p>
                 );
               })}
-              {/* {idx === 0 && (
-                <button
-                  className="serviceButton"
-                  onClick={() => navigate("/service")}
-                >
-                  해당 서비스 확인하기
-                </button>
-              )} */}
             </TextWrapper>
           </div>
         );
