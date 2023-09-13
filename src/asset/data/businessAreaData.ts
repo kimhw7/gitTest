@@ -22,9 +22,9 @@ const businessAreaList: BusinessAreaData[] = [
     imgSrc: "img/Micro365.png",
     title: "M365 외주 헬프데스크",
     content: [
-      " M365 사용 고객사 중 M365 전담 기술지원이 불가한 경우 외주 지원",
+      " M365 사용 고객사 중 M365 전담 기술지원이 불가한 경우 선택적 외주기술지원",
       " 1선 : Client 사용문제 직접지원. (OutLook, 메일전송 불가 등)",
-      "2선 : M365 Magege 기술지원 및 문제 해결. AADC, Exchange Hybrid 등 업무 지원",
+      "2선 : M365 Manager 기술지원 및 문제 해결. AADC, Exchange Hybrid 등 업무 지원",
     ],
   },
   {

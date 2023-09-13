@@ -12,7 +12,11 @@ const WayToCome = () => {
       <div className="information-container">
         <div className="information-wrapper">
           <MdLocationOn />
-          <p>서울시 금천구 가산디지털1로 204, 10층 1004호</p>
+          <p>
+            서울시 금천구 가산디지털1로 204
+            <br />
+            10층 1004호 (가산동, 가산역반도아이비밸리)
+          </p>
         </div>
         <div className="information-wrapper">
           <BsFillTelephoneFill />

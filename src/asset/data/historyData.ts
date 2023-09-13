@@ -17,7 +17,6 @@ const HistoryData: HistoryDataType = [
   { date: "2017-06", content: "(주)선유씨엔에스 인수. (동종업무 법인)" },
   { date: "2017-01", content: "Hyper-V기반 Windows 가상서버 호스팅 사업 개시" },
   { date: "2015-04", content: "사당동으로 본사 이전" },
-  { date: "2014-08", content: "개발부서 설립" },
   { date: "2010-05", content: "MicroSoft업무 Project 협업 시작" },
   { date: "2007-08", content: "해외 서버 관리서비스 수행 시작" },
   { date: "2007-01", content: "㈜인포필드 법인 전환" },
