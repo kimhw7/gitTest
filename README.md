@@ -1,4 +1,4 @@
-#AWS EC2 배포 중
+## AWS EC2 배포 중
 - 인스턴스 t2.nano 유형 사용중
 - elastic ip 사용중
 - forever로 백그라운드 실행
