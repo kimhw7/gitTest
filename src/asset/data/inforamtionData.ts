@@ -11,6 +11,7 @@ const documentList: Documents[] = [
     webpSrc: "img/if-regist.webp",
     imgSrc: "img/if-regist.png",
     link: "http://www.infofield.net/ImageInfo/if_regist.jpg",
+    // link: "http://localhost:3000/ImageInfo/if_bank.jpg",
   },
   {
     name: "입금 계좌 사본",
