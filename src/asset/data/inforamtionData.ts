@@ -10,8 +10,8 @@ const documentList: Documents[] = [
     name: "사업자 등록증",
     webpSrc: "img/if-regist.webp",
     imgSrc: "img/if-regist.png",
-    link: "http://www.infofield.net/ImageInfo/if_regist.jpg",
-    // link: "http://localhost:3000/ImageInfo/if_bank.jpg",
+    // link: "http://www.infofield.net/ImageInfo/if_regist.jpg",
+    link: "/ImageInfo/if_bank.jpg",
   },
   {
     name: "입금 계좌 사본",

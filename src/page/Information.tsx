@@ -1,8 +1,10 @@
 import { styled } from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 import documentList from "../asset/data/inforamtionData";
 
 const Information = () => {
+  const navigate = useNavigate();
   return (
     <DefaultWrapper className="openAnimation">
       <div className="text-wrapper">
@@ -16,7 +18,7 @@ const Information = () => {
         {documentList.map((el, idx) => {
           return (
             <Docu className="docu" key={idx + "docu"}>
-              <a href={el.link} target="_blank">
+              <div onClick={() => navigate(el.link)}>
                 <picture>
                   <source srcSet={el.webpSrc} type="image/webp" />
                   <source srcSet={el.imgSrc} type="image/png" />
@@ -25,7 +27,7 @@ const Information = () => {
                     alt={`${el.name} 서류 미리보기 사진, 클릭 시 사진 링크 이동`}
                   />
                 </picture>
-              </a>
+              </div>
               <p>{el.name}</p>
             </Docu>
           );
