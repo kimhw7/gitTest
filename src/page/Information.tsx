@@ -44,7 +44,10 @@ const Information = () => {
         {documentList.map((el, idx) => {
           return (
             <Docu className="docu" key={idx + "docu"}>
-              <div onClick={() => openImgHandler(el.link, el.name)}>
+              <div
+                className="imgWrapper"
+                onClick={() => openImgHandler(el.link, el.name)}
+              >
                 <picture>
                   <source srcSet={el.webpSrc} type="image/webp" />
                   <source srcSet={el.imgSrc} type="image/png" />
