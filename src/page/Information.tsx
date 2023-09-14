@@ -1,12 +1,38 @@
 import { styled } from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import documentList from "../asset/data/inforamtionData";
+import ImgFull from "../components/informaton/ImgFull";
+import { type } from "os";
 
+type ClickedImg = {
+  fullImgSrc: string;
+  name: string;
+};
 const Information = () => {
+  const [isImgOpen, setIsImgOpen] = useState<boolean>(false);
+  const [clickedImg, setClickedImg] = useState<undefined | ClickedImg>(
+    undefined
+  );
+  const closeImgHandler = () => {
+    setIsImgOpen(false);
+  };
+  const openImgHandler = (src: string, imgName: string) => {
+    setClickedImg({ fullImgSrc: src, name: imgName });
+    setIsImgOpen(true);
+  };
   const navigate = useNavigate();
   return (
     <DefaultWrapper className="openAnimation">
+      {clickedImg && isImgOpen && (
+        <ImgFull
+          onImgClose={closeImgHandler}
+          isImgOpen={isImgOpen}
+          fullImgSrc={clickedImg.fullImgSrc}
+          name={clickedImg.name}
+        />
+      )}
       <div className="text-wrapper">
         <p className="text">
           상호: (주)인포필드
@@ -18,7 +44,7 @@ const Information = () => {
         {documentList.map((el, idx) => {
           return (
             <Docu className="docu" key={idx + "docu"}>
-              <div onClick={() => navigate(el.link)}>
+              <div onClick={() => openImgHandler(el.link, el.name)}>
                 <picture>
                   <source srcSet={el.webpSrc} type="image/webp" />
                   <source srcSet={el.imgSrc} type="image/png" />
