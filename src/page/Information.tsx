@@ -102,6 +102,9 @@ const Docu = styled.div`
   @media screen and (max-width: 767px) {
     margin-top: 32px;
   }
+  .imgWrapper:hover {
+    cursor: pointer;
+  }
 `;
 
 export default Information;
